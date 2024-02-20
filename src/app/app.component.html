@@ -1,0 +1,28 @@
+<div>
+  <h2>User Details</h2>
+  <div class="search-input">
+    <label>Search Name: <input [(ngModel)]="searchTerm"></label>
+  </div>
+  <div>
+    <table >
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Joining Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | search: searchTerm">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.dept}}</td>
+          <td>{{user.salary}}</td>
+          <td>{{user.doj | date:'medium'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
