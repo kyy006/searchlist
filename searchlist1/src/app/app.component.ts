@@ -17,7 +17,7 @@ export class AppComponent {
   users: User[] = [
     {
       firstName: 'mary',
-      lastName: 'Doe',
+      lastName: 'macy',
       dept: 'Finance',
       salary: 233000,
       doj: new Date('2012-01-11'),
